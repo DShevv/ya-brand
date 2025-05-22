@@ -1,0 +1,128 @@
+@use "../fonts" as *;
+@use "../functions" as *;
+
+.tariffs {
+  margin-top: vw-1600(140);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: vw-1600(42);
+  }
+
+  &__title {
+    @include h2-black;
+    color: var(--yellow);
+  }
+
+  &__text {
+    @include body-2;
+    color: var(--txt);
+    max-width: vw-1600(636);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: vw-1600(46) vw-1600(24);
+    justify-content: center;
+  }
+
+  &__item {
+    width: vw-1600(416);
+    height: vw-1600(825);
+    position: relative;
+    color: var(--bg);
+    padding: vw-1600(80) vw-1600(30) vw-1600(31) vw-1600(24);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &-badge {
+      position: absolute;
+      top: vw-1600(-80);
+      right: vw-1600(-80);
+      width: vw-1600(250);
+      height: vw-1600(250);
+    }
+
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    &-title {
+      @include h5;
+      text-align: center;
+      margin-bottom: vw-1600(70);
+    }
+
+    &-list {
+      @include body-7;
+      list-style: none;
+
+      li {
+        margin-bottom: vw-1600(12);
+        display: flex;
+        align-items: center;
+        gap: vw-1600(8);
+        filter: grayscale(100%);
+        opacity: 0.4;
+
+        svg {
+          flex-shrink: 0;
+          width: vw-1600(32);
+          height: vw-1600(32);
+        }
+
+        &.active {
+          filter: grayscale(0);
+          opacity: 1;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-info {
+      margin-top: vw-1600(12);
+      margin-bottom: vw-1600(14);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: vw-1600(344);
+    }
+
+    &-price {
+      @include h7;
+      color: var(--violet);
+      display: flex;
+      gap: vw-1600(8);
+      align-items: center;
+
+      span {
+        @include body-7;
+        color: var(--bg);
+        opacity: 0.5;
+        text-decoration: line-through;
+      }
+    }
+
+    &-places {
+      @include body-9;
+      color: var(--txt);
+      border-radius: vw-1600(32);
+      padding: vw-1600(7) vw-1600(16) vw-1600(7) vw-1600(16);
+      background: var(--bg);
+    }
+  }
+}

@@ -1,0 +1,219 @@
+@use "functions" as *;
+
+@font-face {
+  font-family: "Cygre Medium";
+  src: url("/assets/fonts/Cygre Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cygre ExtraBold";
+  src: url("/assets/fonts/Cygre ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cygre SemiBold";
+  src: url("/assets/fonts/Cygre SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cygre Light";
+  src: url("/assets/fonts/Cygre Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cygre Black";
+  src: url("/assets/fonts/Cygre Black.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cygre";
+  src: url("/assets/fonts/Cygre Regular.ttf") format("truetype");
+  font-weight: 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+@mixin h1-semi {
+  font-family: var(--font6);
+  font-weight: 600;
+  font-size: vw-1600(110);
+  letter-spacing: 0em;
+  text-transform: uppercase;
+}
+
+@mixin h1-black {
+  font-family: var(--font4);
+  font-weight: 900;
+  font-size: vw-1600(110);
+  text-transform: uppercase;
+  letter-spacing: 0em;
+}
+
+@mixin h2-semi {
+  font-family: var(--font6);
+  font-weight: 600;
+  font-size: vw-1600(54);
+  line-height: 140%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@mixin h2-black {
+  font-family: var(--font4);
+  font-weight: 900;
+  font-size: vw-1600(54);
+  line-height: 140%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@mixin h3 {
+  font-family: var(--font4);
+  font-weight: 900;
+  font-size: vw-1600(42);
+  line-height: 140%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@mixin h4 {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: vw-1600(42);
+  line-height: 130%;
+}
+
+@mixin h5 {
+  font-family: var(--third-family);
+  font-weight: 800;
+  font-size: vw-1600(42);
+}
+
+@mixin h6 {
+  font-family: var(--third-family);
+  font-weight: 800;
+  font-size: vw-1600(32);
+}
+
+@mixin h7 {
+  font-family: var(--third-family);
+  font-weight: 800;
+  font-size: vw-1600(28);
+}
+
+@mixin h8 {
+  font-family: var(--third-family);
+  font-weight: 800;
+  font-size: vw-1600(22);
+}
+
+@mixin body-1 {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: vw-1600(42);
+  line-height: 130%;
+}
+
+@mixin body-2 {
+  font-family: var(--font5);
+  font-weight: 400;
+  font-size: vw-1600(28);
+  line-height: 140%;
+}
+
+@mixin body-3 {
+  font-family: var(--font3);
+  font-weight: 300;
+  font-size: vw-1600(28);
+}
+
+@mixin body-4 {
+  font-family: var(--font5);
+  font-weight: 400;
+  font-size: vw-1600(24);
+  line-height: 140%;
+}
+
+@mixin body-4-semibold {
+  font-family: var(--font6);
+  font-weight: 600;
+  font-size: vw-1600(24);
+  line-height: 140%;
+}
+
+@mixin body-5 {
+  font-family: var(--font3);
+  font-weight: 300;
+  font-size: vw-1600(20);
+  line-height: 150%;
+}
+
+@mixin body-6 {
+  font-family: var(--font3);
+  font-weight: 300;
+  font-size: vw-1600(18);
+  line-height: 150%;
+}
+
+@mixin body-7 {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: vw-1600(18);
+  line-height: 140%;
+}
+
+@mixin body-8 {
+  font-family: var(--font5);
+  font-weight: 400;
+  font-size: vw-1600(16);
+  line-height: 140%;
+}
+
+@mixin body-8-light {
+  font-family: var(--font3);
+  font-weight: 300;
+  font-size: vw-1600(16);
+
+  line-height: 140%;
+}
+
+@mixin body-9 {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: vw-1600(16);
+  line-height: 140%;
+}
+
+@mixin body-10 {
+  font-family: var(--second-family);
+  font-weight: 500;
+  font-size: vw-1600(14);
+  line-height: 140%;
+}
+
+@mixin button {
+  font-family: var(--third-family);
+  font-weight: 800;
+  font-size: vw-1600(26);
+}
+
+@mixin button-small {
+  font-family: var(--third-family);
+  font-weight: 800;
+  font-size: vw-1600(20);
+}

@@ -1,0 +1,286 @@
+@use "../fonts" as *;
+@use "../functions" as *;
+
+.hero {
+  height: calc(100dvh - vw-1600(138));
+  position: relative;
+
+  &__texture {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100dvw;
+    height: vw-1600(974);
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  &__gradient {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100dvw;
+    height: vw-1600(117);
+    background: linear-gradient(360deg, #101010 0%, rgba(16, 16, 16, 0) 100%);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    gap: vw-1600(30);
+
+    max-width: vw-1600(1296);
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  &__content {
+    padding-top: vw-1600(90);
+    flex-shrink: 0;
+  }
+
+  &__tag {
+    @include body-3;
+
+    color: var(--txt);
+  }
+
+  &__title {
+    @include h1-semi;
+    color: var(--yellow);
+
+    span {
+      @include h1-black;
+    }
+  }
+
+  &__title-container {
+    position: relative;
+  }
+
+  &__date {
+    position: absolute;
+    right: vw-1600(-165);
+    bottom: vw-1600(-112);
+
+    width: vw-1600(201);
+    height: vw-1600(169);
+
+    @include h6;
+
+    color: var(--txt);
+
+    span {
+      position: absolute;
+      top: vw-1600(60);
+      left: vw-1600(60);
+      z-index: 1;
+      transform: rotate(40deg);
+    }
+
+    &-icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+
+      path:first-of-type {
+        fill: var(--yellow);
+      }
+
+      path:last-of-type {
+        fill: var(--violet);
+      }
+    }
+  }
+
+  &__text {
+    max-width: vw-1600(555);
+    margin-bottom: vw-1600(42);
+
+    @include body-1;
+
+    color: var(--txt);
+  }
+
+  .button {
+    width: fit-content;
+  }
+
+  &__support {
+    margin-top: vw-1600(83);
+    &-text {
+      @include body-5;
+
+      color: var(--txt);
+    }
+
+    &-list {
+      margin-top: vw-1600(20);
+      display: flex;
+      align-items: center;
+      gap: vw-1600(24);
+    }
+  }
+
+  &__speakers {
+    position: relative;
+    height: 100%;
+    z-index: 3;
+
+    &-all {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: vw-1600(1027);
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &-list {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__speaker {
+    position: absolute;
+    filter: grayscale(100%);
+    transition: all 0.3s ease-in-out;
+    z-index: 3;
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    &-info {
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      position: absolute;
+      bottom: vw-1600(73);
+      left: vw-1600(412);
+      width: 100%;
+      height: 100%;
+      box-shadow: vw-1600(4) vw-1600(5) 0 vw-1600(0) var(--yellow);
+      background: var(--bg-2);
+      height: fit-content;
+      padding: vw-1600(16) vw-1600(20);
+      color: var(--bg);
+      border-radius: vw-1600(12);
+      min-width: vw-1600(328);
+      width: fit-content;
+      z-index: 10;
+      pointer-events: none;
+
+      @include h8;
+    }
+
+    &-text {
+      @include body-5;
+    }
+
+    &:hover {
+      filter: grayscale(0%);
+
+      .hero__speaker-info {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+
+    &.nina {
+      left: 0;
+      bottom: 0;
+      width: vw-1600(528);
+      height: vw-1600(459);
+      z-index: 9;
+    }
+
+    &.maria {
+      left: vw-1600(130);
+      bottom: vw-1600(171);
+      width: vw-1600(392);
+      height: vw-1600(505);
+      z-index: 6;
+
+      .hero__speaker-info {
+        left: vw-1600(250);
+        bottom: vw-1600(400);
+      }
+    }
+
+    &.alena {
+      left: vw-1600(478);
+      bottom: 0;
+      width: vw-1600(350);
+      height: vw-1600(501);
+      z-index: 7;
+
+      .hero__speaker-info {
+        left: vw-1600(-250);
+        bottom: vw-1600(480);
+      }
+    }
+
+    &.vitaliy {
+      left: vw-1600(656);
+      bottom: vw-1600(0);
+      width: vw-1600(376);
+      height: vw-1600(459);
+      z-index: 8;
+
+      .hero__speaker-info {
+        left: vw-1600(-200);
+        bottom: vw-1600(240);
+      }
+    }
+
+    &.elena {
+      left: vw-1600(775);
+      bottom: vw-1600(80);
+      width: vw-1600(250);
+      height: vw-1600(572);
+      z-index: 5;
+
+      .hero__speaker-info {
+        left: vw-1600(-200);
+        bottom: vw-1600(550);
+      }
+    }
+
+    &.natalia {
+      left: vw-1600(607);
+      bottom: vw-1600(230);
+      width: vw-1600(270);
+      height: vw-1600(446);
+      z-index: 4;
+
+      .hero__speaker-info {
+        left: vw-1600(50);
+        bottom: vw-1600(440);
+      }
+    }
+
+    &.oleg {
+      left: vw-1600(374);
+      bottom: vw-1600(267);
+      width: vw-1600(349);
+      height: vw-1600(525);
+      z-index: 3;
+
+      .hero__speaker-info {
+        left: vw-1600(-250);
+        bottom: vw-1600(400);
+      }
+    }
+  }
+}

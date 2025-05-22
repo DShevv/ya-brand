@@ -1,0 +1,120 @@
+@use "../fonts" as *;
+@use "../functions" as *;
+
+.expectations {
+  margin-top: vw-1600(140);
+  &__title {
+    color: var(--txt);
+    @include h2-semi;
+
+    span {
+      @include h2-black;
+      color: var(--yellow);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin-top: vw-1600(40);
+  }
+
+  &__item {
+    display: flex;
+    gap: vw-1600(120);
+    align-items: center;
+    justify-content: space-between;
+    padding: vw-1600(36) vw-1600(48);
+    background: var(--bg);
+    border-radius: vw-1600(12);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: vw-1600(-32);
+    transition: all 0.3s ease-in-out;
+
+    &:nth-child(1) {
+      z-index: 4;
+    }
+
+    &:nth-child(2) {
+      background: var(--dark-1);
+      z-index: 3;
+    }
+
+    &:nth-child(3) {
+      background: var(--dark-2);
+      z-index: 2;
+    }
+
+    &:nth-child(4) {
+      background: var(--dark-3);
+      z-index: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient);
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      z-index: -1;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 1;
+      }
+
+      .expectations__item-caption {
+        opacity: 1;
+      }
+
+      .expectations__item-text {
+        opacity: 1;
+      }
+    }
+
+    &:hover ~ .expectations__item {
+    }
+
+    &:has(+ .expectations__item:hover) {
+      padding-bottom: vw-1600(5);
+      margin-bottom: 0;
+    }
+
+    &-caption {
+      display: flex;
+      align-items: center;
+      gap: vw-1600(32);
+      opacity: 0.5;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &-img {
+      width: vw-1600(120);
+      height: vw-1600(120);
+      object-fit: contain;
+    }
+
+    &-title {
+      @include h3;
+      color: var(--txt);
+    }
+
+    &-text {
+      max-width: vw-1600(698);
+      @include body-4;
+      color: var(--txt);
+      opacity: 0.5;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+  }
+}

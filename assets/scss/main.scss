@@ -1,0 +1,129 @@
+@use "fonts" as *;
+@use "functions" as *;
+@use "buttons";
+@use "blocks/hero";
+@use "blocks/speakers";
+@use "blocks/expectations";
+@use "blocks/place";
+@use "blocks/tariffs";
+@use "blocks/program";
+@use "blocks/who";
+
+:root {
+  --second-family: "Cygre Medium", sans-serif;
+  --third-family: "Cygre ExtraBold", sans-serif;
+  --font3: "Cygre Light", sans-serif;
+  --font4: "Cygre Black", sans-serif;
+  --font5: "Cygre", sans-serif;
+  --font6: "Cygre SemiBold", sans-serif;
+
+  --bg: #101010;
+  --bg-2: #faf9f6;
+  --txt: #ffffff;
+  --dark-1: #121212;
+  --dark-2: #171717;
+  --dark-3: #202020;
+
+  --gradient: linear-gradient(90deg, #6747e5 0%, #9e7dff 100%);
+  --violet: #6747e5;
+  --yellow: #f1f33f;
+  --yellow-2: #ffff55;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--txt);
+  font-family: var(--second-family);
+  background-color: var(--bg);
+}
+
+.wrapper {
+  max-width: vw-1600(1296);
+  width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: 1380px) {
+    max-width: 94.2vw;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: calc(100% - 40px);
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+.header {
+  position: relative;
+  z-index: 2;
+  max-width: vw-1600(1296);
+  width: 100%;
+  margin: 0 auto;
+  margin-top: vw-1600(32);
+  background: var(--bg-2);
+  border-radius: vw-1600(12);
+  padding: vw-1600(24) vw-1600(32);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    display: flex;
+
+    &-img {
+      width: vw-1600(187);
+      height: vw-1600(55);
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: vw-1600(107);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: vw-1600(54);
+    list-style: none;
+  }
+
+  &__link {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: vw-1600(20);
+    text-decoration: none;
+    color: var(--bg);
+    padding-bottom: vw-1600(3);
+    transition: all 0.3s ease;
+    border-bottom: vw-1600(2) solid transparent;
+
+    &:hover {
+      border-bottom: vw-1600(2) solid var(--yellow);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+  }
+}

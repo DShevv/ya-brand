@@ -1,0 +1,148 @@
+@use "../fonts" as *;
+@use "../functions" as *;
+
+.speakers {
+  margin-top: vw-1600(140);
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    @include h2-black;
+    color: var(--yellow);
+    margin-bottom: vw-1600(42);
+
+    span {
+      color: var(--txt);
+      @include h2-semi;
+    }
+  }
+
+  &__text {
+    @include body-2;
+    color: var(--txt);
+    max-width: vw-1600(746);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: vw-1600(48) vw-1600(24);
+    justify-content: center;
+  }
+
+  &__item {
+    flex: 0 0 vw-1600(416);
+    position: relative;
+    border-radius: vw-1600(12);
+    height: vw-1600(700);
+    width: vw-1600(416);
+    display: flex;
+    align-items: flex-end;
+    box-shadow: 0 0 0 0 var(--yellow);
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 10px 12px 0 0 var(--yellow);
+    }
+
+    &-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: vw-1600(260);
+      object-fit: cover;
+    }
+
+    &-info {
+      position: relative;
+      z-index: 2;
+      border-radius: vw-1600(12);
+      background: var(--bg-2);
+      padding: vw-1600(24);
+      color: var(--bg);
+      width: 100%;
+      height: vw-1600(475);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &-tag {
+      @include body-10;
+      color: var(--bg);
+      background: var(--yellow);
+      border-radius: vw-1600(32);
+      padding: vw-1600(6) vw-1600(24);
+      width: fit-content;
+    }
+
+    &-name {
+      @include h7;
+      color: var(--bg);
+      margin-bottom: vw-1600(10);
+      margin-top: vw-1600(6);
+    }
+
+    &-text {
+      @include body-6;
+      color: var(--bg);
+    }
+
+    &-social {
+      display: flex;
+      gap: vw-1600(8);
+
+      &-link {
+        width: vw-1600(32);
+        height: vw-1600(32);
+        object-fit: contain;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        svg {
+          width: vw-1600(32);
+          height: vw-1600(32);
+        }
+      }
+    }
+
+    &:first-child {
+      flex: 0 0 100%;
+      display: flex;
+      height: vw-1600(453);
+      background: var(--bg-2);
+
+      .speakers__item-img {
+        position: static;
+        height: 100%;
+        width: vw-1600(377);
+      }
+
+      .speakers__item-info {
+        height: 100%;
+        width: 100%;
+        padding: vw-1600(34) vw-1600(36);
+      }
+
+      .speakers__item-tag {
+        @include body-9;
+      }
+
+      .speakers__item-name {
+        @include h6;
+      }
+
+      .speakers__item-text {
+        @include body-5;
+        max-width: vw-1600(820);
+      }
+    }
+  }
+}

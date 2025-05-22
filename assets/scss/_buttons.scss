@@ -1,0 +1,51 @@
+@use "fonts" as *;
+@use "functions" as *;
+
+.button {
+  @include button;
+  border-radius: vw-1600(48);
+  padding: vw-1600(12) vw-1600(36) vw-1600(14) vw-1600(36);
+  background: var(--yellow);
+  color: var(--bg);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  min-width: vw-1600(306);
+  box-shadow: vw-1600(0) vw-1600(0) 0 0 var(--txt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: var(--yellow-2);
+  }
+
+  &:active {
+    box-shadow: vw-1600(3) vw-1600(4) 0 0 var(--txt);
+    background: var(--yellow-2);
+  }
+
+  &.button-secondary {
+    @include button-small;
+    background: var(--bg-2);
+    color: var(--bg);
+    border: 1px solid rgba(28, 28, 28, 0.3);
+    border-radius: vw-1600(32);
+    padding: vw-1600(13) vw-1600(36) vw-1600(15) vw-1600(36);
+    min-width: vw-1600(260);
+    box-shadow: vw-1600(0) vw-1600(0) 0 0 var(--yellow-2);
+
+    &:hover {
+      background: var(--bg);
+      color: var(--txt);
+    }
+
+    &:active {
+      box-shadow: vw-1600(3) vw-1600(4) 0 0 var(--yellow-2);
+      background: var(--bg);
+      color: var(--txt);
+    }
+  }
+}

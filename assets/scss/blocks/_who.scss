@@ -1,0 +1,59 @@
+@use "../fonts" as *;
+@use "../functions" as *;
+
+.who {
+  margin-top: vw-1600(140);
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+
+    @include h2-black;
+    margin-bottom: vw-1600(42);
+    color: var(--yellow);
+
+    span {
+      @include h2-semi;
+      color: var(--txt);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: vw-1600(24);
+  }
+
+  &__item {
+    box-shadow: 0 0 0 0 var(--yellow);
+    background: var(--bg-2);
+    border-radius: vw-1600(12);
+    padding: vw-1600(24);
+    height: vw-1600(306);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    svg {
+      width: vw-1600(88);
+      height: vw-1600(88);
+    }
+
+    &-title {
+      @include body-4-semibold;
+
+      width: 100%;
+      text-align: left;
+    }
+
+    &:hover {
+      box-shadow: vw-1600(5) vw-1600(7) 0 0 var(--yellow);
+    }
+  }
+}
