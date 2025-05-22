@@ -4,6 +4,7 @@
 .hero {
   height: calc(100dvh - vw-1600(138));
   position: relative;
+  min-height: vw-1600(802);
 
   &__texture {
     position: absolute;
@@ -11,7 +12,8 @@
     left: 50%;
     transform: translateX(-50%);
     width: 100dvw;
-    height: vw-1600(974);
+    height: 100dvh;
+    min-height: vw-1600(940);
     object-fit: cover;
     z-index: 0;
   }
@@ -127,6 +129,21 @@
       display: flex;
       align-items: center;
       gap: vw-1600(24);
+    }
+
+    &-item {
+      &:nth-child(1) {
+        width: vw-1600(153);
+        height: vw-1600(32);
+      }
+      &:nth-child(2) {
+        width: vw-1600(132);
+        height: vw-1600(38);
+      }
+      &:nth-child(3) {
+        width: vw-1600(162);
+        height: vw-1600(40);
+      }
     }
   }
 
