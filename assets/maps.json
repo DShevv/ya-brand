@@ -6569,22 +6569,6 @@
   },
   {
     "tags": {
-      "any": ["park", "cemetery"]
-    },
-    "stylers": {
-      "visibility": "off"
-    }
-  },
-  {
-    "tags": {
-      "any": ["vegetation"]
-    },
-    "stylers": {
-      "visibility": "off"
-    }
-  },
-  {
-    "tags": {
       "any": [
         "industrial",
         "construction_site",
@@ -6674,6 +6658,14 @@
   },
   {
     "tags": {
+      "any": ["road_7"]
+    },
+    "stylers": {
+      "visibility": "off"
+    }
+  },
+  {
+    "tags": {
       "any": [
         "road_construction",
         "road_minor",
@@ -6682,6 +6674,25 @@
         "road_limited"
       ]
     },
+    "stylers": {
+      "visibility": "off"
+    }
+  },
+  {
+    "tags": {
+      "any": ["district"]
+    },
+    "elements": "label",
+    "stylers": {
+      "visibility": "off"
+    }
+  },
+  {
+    "tags": {
+      "any": "admin",
+      "none": ["country", "region", "locality", "district", "address"]
+    },
+    "elements": "label",
     "stylers": {
       "visibility": "off"
     }

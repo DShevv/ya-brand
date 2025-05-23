@@ -18,6 +18,12 @@
   align-items: center;
   justify-content: center;
 
+  @media (max-width: 768px) {
+    min-width: 200px;
+    border-radius: 48px;
+    padding: 12px 24px;
+  }
+
   &:hover {
     background: var(--yellow-2);
   }
@@ -25,6 +31,10 @@
   &:active {
     box-shadow: vw-1600(3) vw-1600(4) 0 0 var(--txt);
     background: var(--yellow-2);
+
+    @media (max-width: 768px) {
+      box-shadow: 3px 4px 0 0 var(--txt);
+    }
   }
 
   &.button-secondary {
@@ -46,6 +56,49 @@
       box-shadow: vw-1600(3) vw-1600(4) 0 0 var(--yellow-2);
       background: var(--bg);
       color: var(--txt);
+    }
+  }
+}
+
+.button-arrow {
+  width: vw-1600(64);
+  height: vw-1600(64);
+  background: var(--yellow);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 0 var(--txt);
+  border: none;
+  outline: none;
+
+  svg {
+    width: vw-1600(30);
+    height: vw-1600(24);
+  }
+
+  &:hover {
+    background: var(--yellow-2);
+  }
+
+  &:active {
+    background: var(--yellow-2);
+    box-shadow: vw-1600(1) vw-1600(2) 0 0 var(--txt);
+  }
+
+  @media (max-width: 768px) {
+    width: 48px;
+    height: 48px;
+
+    svg {
+      width: 28px;
+      height: 16px;
+    }
+
+    &:active {
+      box-shadow: 1px 2px 0 0 var(--txt);
     }
   }
 }

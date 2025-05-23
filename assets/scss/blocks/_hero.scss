@@ -6,6 +6,19 @@
   position: relative;
   min-height: vw-1600(802);
 
+  @media (max-width: 768px) {
+    height: calc(100dvh + 96px);
+    padding-top: 88px;
+    min-height: 100dvh;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__wrapper {
+    width: fit-content;
+    transition: all 0.3s ease-in-out;
+    flex: 0 0 282px;
+  }
+
   &__texture {
     position: absolute;
     bottom: 0;
@@ -16,6 +29,14 @@
     min-height: vw-1600(940);
     object-fit: cover;
     z-index: 0;
+
+    @media (max-width: 768px) {
+      height: 100dvh;
+      max-height: 100dvh;
+      bottom: initial;
+      transition: all 0.3s ease-in-out;
+      top: 0;
+    }
   }
 
   &__gradient {
@@ -28,6 +49,13 @@
     background: linear-gradient(360deg, #101010 0%, rgba(16, 16, 16, 0) 100%);
     z-index: 2;
     pointer-events: none;
+
+    @media (max-width: 768px) {
+      bottom: 0px;
+      transition: all 0.3s ease-in-out;
+      height: 132px;
+      z-index: 10;
+    }
   }
 
   &__container {
@@ -40,11 +68,27 @@
     width: 100%;
     margin: 0 auto;
     z-index: 2;
+
+    @media (max-width: 768px) {
+      gap: 0;
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      transition: all 0.3s ease-in-out;
+      max-width: calc(100vw - 40px);
+    }
   }
 
   &__content {
     padding-top: vw-1600(90);
     flex-shrink: 0;
+
+    @media (max-width: 768px) {
+      padding-top: 0;
+      display: flex;
+      transition: all 0.3s ease-in-out;
+      flex-direction: column;
+    }
   }
 
   &__tag {
@@ -64,12 +108,16 @@
 
   &__title-container {
     position: relative;
+    width: fit-content;
+    @media (max-width: 768px) {
+      margin-top: 12px;
+    }
   }
 
   &__date {
     position: absolute;
-    right: vw-1600(-165);
-    bottom: vw-1600(-112);
+    right: vw-1600(-178);
+    bottom: vw-1600(-120);
 
     width: vw-1600(201);
     height: vw-1600(169);
@@ -78,12 +126,27 @@
 
     color: var(--txt);
 
+    @media (max-width: 768px) {
+      width: 126px;
+      height: 117px;
+      right: -83px;
+      bottom: -96px;
+      z-index: -1;
+    }
+
     span {
       position: absolute;
-      top: vw-1600(60);
+      top: vw-1600(70);
       left: vw-1600(60);
       z-index: 1;
       transform: rotate(40deg);
+
+      @media (max-width: 768px) {
+        top: 49px;
+        left: 37px;
+        transform: rotate(58deg);
+        font-size: 20px;
+      }
     }
 
     &-icon {
@@ -110,6 +173,12 @@
     @include body-1;
 
     color: var(--txt);
+
+    @media (max-width: 768px) {
+      max-width: 335px;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
   }
 
   .button {
@@ -124,25 +193,55 @@
       color: var(--txt);
     }
 
+    @media (max-width: 768px) {
+      margin-top: 30px;
+      flex: 0 0 66px;
+      margin-top: 30px;
+
+      &-text {
+        line-height: 155%;
+      }
+    }
+
     &-list {
       margin-top: vw-1600(20);
       display: flex;
       align-items: center;
       gap: vw-1600(24);
+
+      @media (max-width: 768px) {
+        margin-top: 16px;
+        gap: 12px;
+      }
     }
 
     &-item {
       &:nth-child(1) {
         width: vw-1600(153);
         height: vw-1600(32);
+
+        @media (max-width: 768px) {
+          width: 108px;
+          height: 22px;
+        }
       }
       &:nth-child(2) {
         width: vw-1600(132);
         height: vw-1600(38);
+
+        @media (max-width: 768px) {
+          width: 91px;
+          height: 26px;
+        }
       }
       &:nth-child(3) {
         width: vw-1600(162);
         height: vw-1600(40);
+
+        @media (max-width: 768px) {
+          width: 113px;
+          height: 28px;
+        }
       }
     }
   }
@@ -151,6 +250,20 @@
     position: relative;
     height: 100%;
     z-index: 3;
+
+    @media (max-width: 768px) {
+      width: calc(100dvw);
+      aspect-ratio: 375/333;
+      left: -20px;
+      flex: 1 1 calc(100dvh - 282px - 88px);
+      align-items: flex-end;
+      transition: all 0.3s ease-in-out;
+
+      &.mobile {
+        display: flex;
+        position: relative;
+      }
+    }
 
     &-all {
       position: absolute;
@@ -164,6 +277,12 @@
     &-list {
       width: 100%;
       height: 100%;
+
+      @media (max-width: 768px) {
+        position: relative;
+        aspect-ratio: 375/333;
+        height: auto;
+      }
     }
   }
 
@@ -185,8 +304,6 @@
       position: absolute;
       bottom: vw-1600(73);
       left: vw-1600(412);
-      width: 100%;
-      height: 100%;
       box-shadow: vw-1600(4) vw-1600(5) 0 vw-1600(0) var(--yellow);
       background: var(--bg-2);
       height: fit-content;
@@ -195,14 +312,28 @@
       border-radius: vw-1600(12);
       min-width: vw-1600(328);
       width: fit-content;
-      z-index: 10;
+      z-index: 11;
       pointer-events: none;
-
       @include h8;
+
+      @media (max-width: 768px) {
+        height: fit-content;
+        bottom: 77px;
+        left: 175px;
+        box-shadow: 4px 5px 0px 0px var(--yellow);
+        border-radius: 12px;
+        padding: 10px 12px 12px 12px;
+        min-width: 210px;
+        width: fit-content;
+      }
     }
 
     &-text {
       @include body-5;
+
+      @media (max-width: 768px) {
+        @include body-10;
+      }
     }
 
     &:hover {
@@ -214,12 +345,30 @@
       }
     }
 
+    @media (max-width: 768px) {
+      &.active {
+        filter: grayscale(0%);
+
+        .hero__speaker-info {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+    }
+
     &.nina {
       left: 0;
       bottom: 0;
       width: vw-1600(528);
       height: vw-1600(459);
       z-index: 9;
+
+      @media (max-width: 768px) {
+        left: -12.9%;
+        bottom: 0;
+        width: 64.3%;
+        height: 59.59%;
+      }
     }
 
     &.maria {
@@ -232,6 +381,18 @@
       .hero__speaker-info {
         left: vw-1600(250);
         bottom: vw-1600(400);
+      }
+
+      @media (max-width: 768px) {
+        left: 3%;
+        bottom: 24.92%;
+        width: 47.81%;
+        height: 61.61%;
+
+        .hero__speaker-info {
+          left: 2.8%;
+          bottom: 88.86%;
+        }
       }
     }
 
@@ -246,6 +407,18 @@
         left: vw-1600(-250);
         bottom: vw-1600(480);
       }
+
+      @media (max-width: 768px) {
+        left: 41.34%;
+        bottom: 0%;
+        width: 34%;
+        height: 63.63%;
+
+        .hero__speaker-info {
+          left: -2.8%;
+          bottom: 88.86%;
+        }
+      }
     }
 
     &.vitaliy {
@@ -258,6 +431,19 @@
       .hero__speaker-info {
         left: vw-1600(-200);
         bottom: vw-1600(240);
+      }
+
+      @media (max-width: 768px) {
+        left: initial;
+        right: -5%;
+        bottom: 0%;
+        width: 45.34%;
+        height: 57.65%;
+
+        .hero__speaker-info {
+          left: -50.8%;
+          bottom: 88.86%;
+        }
       }
     }
 
@@ -272,6 +458,19 @@
         left: vw-1600(-200);
         bottom: vw-1600(550);
       }
+
+      @media (max-width: 768px) {
+        left: initial;
+        right: -5%;
+        bottom: 13.51%;
+        width: 32.43%;
+        height: 69.66%;
+
+        .hero__speaker-info {
+          left: -99.8%;
+          bottom: 99.86%;
+        }
+      }
     }
 
     &.natalia {
@@ -285,6 +484,19 @@
         left: vw-1600(50);
         bottom: vw-1600(440);
       }
+
+      @media (max-width: 768px) {
+        left: initial;
+        right: 9.91%;
+        bottom: 30.83%;
+        width: 33.03%;
+        height: 54.35%;
+
+        .hero__speaker-info {
+          left: -99.8%;
+          bottom: 99.86%;
+        }
+      }
     }
 
     &.oleg {
@@ -297,6 +509,18 @@
       .hero__speaker-info {
         left: vw-1600(-250);
         bottom: vw-1600(400);
+      }
+
+      @media (max-width: 768px) {
+        left: 29.42%;
+        bottom: 33.63%;
+        width: 42.04%;
+        height: 63.66%;
+
+        .hero__speaker-info {
+          left: 29.2%;
+          bottom: 96.86%;
+        }
       }
     }
   }

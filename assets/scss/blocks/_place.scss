@@ -3,6 +3,11 @@
 
 .place {
   margin-top: vw-1600(140);
+
+  @media (max-width: 768px) {
+    margin-top: 72px;
+  }
+
   &__title {
     color: var(--txt);
     @include h2-semi;
@@ -12,11 +17,20 @@
       @include h2-black;
       color: var(--yellow);
     }
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
   }
 
   &__container {
     display: flex;
     gap: vw-1600(24);
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   &__address {
@@ -33,12 +47,29 @@
       width: vw-1600(88);
       height: vw-1600(88);
     }
+
+    @media (max-width: 768px) {
+      padding: 16px;
+      border-radius: 12px;
+      flex: initial;
+      width: 100%;
+      height: 242px;
+
+      svg {
+        width: 64px;
+        height: 64px;
+      }
+    }
   }
 
   &__name {
     @include h4;
     color: var(--bg);
     margin-bottom: vw-1600(20);
+
+    @media (max-width: 768px) {
+      margin-bottom: 16px;
+    }
   }
 
   &__location {
@@ -51,5 +82,10 @@
     height: 100%;
     object-fit: cover;
     border-radius: vw-1600(12);
+
+    @media (max-width: 768px) {
+      height: 300px;
+      border-radius: 12px;
+    }
   }
 }

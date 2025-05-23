@@ -3,6 +3,11 @@
 
 .expectations {
   margin-top: vw-1600(140);
+
+  @media (max-width: 768px) {
+    margin-top: 72px;
+  }
+
   &__title {
     color: var(--txt);
     @include h2-semi;
@@ -17,6 +22,11 @@
     display: flex;
     flex-direction: column;
     margin-top: vw-1600(40);
+
+    @media (max-width: 768px) {
+      margin-top: 24px;
+      gap: 20px;
+    }
   }
 
   &__item {
@@ -31,6 +41,30 @@
     overflow: hidden;
     margin-bottom: vw-1600(-32);
     transition: all 0.3s ease-in-out;
+    background: var(--dark-2);
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 32px 24px;
+      border-radius: 12px;
+      margin-bottom: 0;
+
+      &.active {
+        &::before {
+          opacity: 1;
+        }
+
+        .expectations__item-caption {
+          opacity: 1;
+        }
+
+        .expectations__item-text {
+          opacity: 1;
+        }
+      }
+    }
 
     &:nth-child(1) {
       z-index: 4;
@@ -39,15 +73,23 @@
     &:nth-child(2) {
       background: var(--dark-1);
       z-index: 3;
+
+      @media (max-width: 768px) {
+        background: var(--dark-2);
+      }
     }
 
     &:nth-child(3) {
       background: var(--dark-2);
       z-index: 2;
+
+      @media (max-width: 768px) {
+        background: var(--dark-2);
+      }
     }
 
     &:nth-child(4) {
-      background: var(--dark-3);
+      background: var(--dark-2);
       z-index: 1;
     }
 
@@ -84,6 +126,10 @@
     &:has(+ .expectations__item:hover) {
       padding-bottom: vw-1600(5);
       margin-bottom: 0;
+
+      @media (max-width: 768px) {
+        padding-bottom: 32px;
+      }
     }
 
     &-caption {
@@ -92,12 +138,23 @@
       gap: vw-1600(32);
       opacity: 0.5;
       transition: opacity 0.3s ease-in-out;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
     }
 
     &-img {
       width: vw-1600(120);
       height: vw-1600(120);
       object-fit: contain;
+
+      @media (max-width: 768px) {
+        width: 60px;
+        height: 60px;
+      }
     }
 
     &-title {
@@ -111,6 +168,10 @@
       color: var(--txt);
       opacity: 0.5;
       transition: opacity 0.3s ease-in-out;
+
+      @media (max-width: 768px) {
+        max-width: 100%;
+      }
     }
   }
 
