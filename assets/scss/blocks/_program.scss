@@ -44,6 +44,10 @@
     z-index: 1;
     overflow: hidden;
 
+    &.headliner {
+      box-shadow: 0px 0px 0 0 var(--yellow);
+    }
+
     @media (max-width: 768px) {
       padding: 32px 24px;
       border-radius: 12px;
@@ -72,11 +76,19 @@
     &:hover {
       color: var(--txt);
 
+      &.headliner {
+        box-shadow: vw-1600(10) vw-1600(12) 0 0 var(--yellow);
+      }
+
       &:before {
         opacity: 1;
       }
 
       .program__item-time {
+        color: var(--txt);
+      }
+
+      .program__item-headline {
         color: var(--txt);
       }
     }
@@ -92,6 +104,18 @@
         .program__item-time {
           color: var(--txt);
         }
+
+        .program__item-headline {
+          color: var(--txt);
+        }
+      }
+
+      &.headliner:hover {
+        box-shadow: 10px 12px 0 0 var(--yellow);
+      }
+
+      &.headliner.active {
+        box-shadow: 10px 12px 0 0 var(--yellow);
       }
     }
 
@@ -115,6 +139,7 @@
       flex: 1;
       @include body-4;
       color: var(--txt);
+      position: relative;
 
       span {
         @include body-4-semibold;
@@ -135,6 +160,20 @@
 
       @media (max-width: 768px) {
         margin-top: 12px;
+      }
+    }
+
+    &-headline {
+      @include h7;
+      color: var(--violet);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: color 0.3s ease;
+
+      @media (max-width: 768px) {
+        position: relative;
+        margin-top: 24px;
       }
     }
 

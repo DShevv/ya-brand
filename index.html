@@ -8,6 +8,25 @@
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" media="print" onload="this.media='all'" href="/assets/css/swiper-bundle.min.css" />
   <title>Document</title>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1212342940360427');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1212342940360427&ev=PageView&noscript=1" /></noscript>
+  <!-- End Meta Pixel Code -->
 </head>
 
 <body>
@@ -45,7 +64,7 @@
 
         </ul>
       </nav>
-      <a href="#" class="button button-secondary">
+      <a href="#tariffs" class="button button-secondary">
         Купить билет
       </a>
     </div>
@@ -98,13 +117,24 @@
             <p class="hero__text">
               Самая масштабная конференция по бренду и рекламе в Бресте!
             </p>
-            <a href="#" class="button">
+            <a href="#tariffs" class="button">
               Купить билет
             </a>
           </div>
 
           <div class="hero__speakers mobile">
             <div class="hero__speakers-list">
+              <div class="hero__speaker anatoiliy">
+                <img src="./assets/images/hero/anatoliy.png" alt="Анатолий Недашковский" class="hero__speaker-img ">
+                <div class="hero__speaker-info">
+                  <p class="hero__speaker-name">
+                    Анатолий Недашковский
+                  </p>
+                  <p class="hero__speaker-text">
+                    Сливки как драйвер вашего бренда
+                  </p>
+                </div>
+              </div>
               <div class="hero__speaker nina">
                 <img src="./assets/images/hero/nina.png" alt="Нина Огиль" class="hero__speaker-img ">
                 <div class="hero__speaker-info">
@@ -113,7 +143,7 @@
                   </p>
                   <p class="hero__speaker-text">
 
-                    Продажи и запуски в Instagram
+                    Управление первым впечатлением
                   </p>
                 </div>
               </div>
@@ -124,7 +154,7 @@
                     Мария Гурбанова
                   </p>
                   <p class="hero__speaker-text">
-                    Продажи и запуски в Instagram
+                    Как создать сильный личный бренд
                   </p>
                 </div>
 
@@ -132,27 +162,15 @@
               </div>
 
               <div class="hero__speaker alena">
-                <img src="./assets/images/hero/alena.png" alt="Алена Дземидович" class="hero__speaker-img ">
+                <img src="./assets/images/hero/two.png" alt="Алена Дземидович и Виталий Захаров"
+                  class="hero__speaker-img ">
+
                 <div class="hero__speaker-info">
                   <p class="hero__speaker-name">
-                    Алена Дземидович
+                    Алена Дземидович и Виталий Захаров
                   </p>
                   <p class="hero__speaker-text">
-                    Продажи и запуски в Instagram
-                  </p>
-                </div>
-
-
-              </div>
-
-              <div class="hero__speaker vitaliy">
-                <img src="./assets/images/hero/vitaliy.png" alt="Виталий Захаров" class="hero__speaker-img ">
-                <div class="hero__speaker-info">
-                  <p class="hero__speaker-name">
-                    Виталий Захаров
-                  </p>
-                  <p class="hero__speaker-text">
-                    Продажи и запуски в Instagram
+                    Creative Head хорошо, а с PR лучше
                   </p>
                 </div>
 
@@ -160,13 +178,13 @@
               </div>
 
               <div class="hero__speaker elena">
-                <img src="./assets/images/hero/elena.png" alt="Елена Гвоздь" class="hero__speaker-img ">
+                <img src="./assets/images/hero/elena.png" alt="Наталья Роше" class="hero__speaker-img ">
                 <div class="hero__speaker-info">
                   <p class="hero__speaker-name">
-                    Елена Гвоздь
+                    Наталья Роше
                   </p>
                   <p class="hero__speaker-text">
-                    Продажи и запуски в Instagram
+                    Личный бренд как проводник в продажах
                   </p>
                 </div>
 
@@ -174,13 +192,13 @@
               </div>
 
               <div class="hero__speaker natalia">
-                <img src="./assets/images/hero/natalia.png" alt="Наталья Роше" class="hero__speaker-img ">
+                <img src="./assets/images/hero/natalia.png" alt="Елена Гвоздь" class="hero__speaker-img ">
                 <div class="hero__speaker-info">
                   <p class="hero__speaker-name">
-                    Наталья Роше
+                    Елена Гвоздь
                   </p>
                   <p class="hero__speaker-text">
-                    Продажи и запуски в Instagram
+                    Как вести любой блог в Instagram
                   </p>
                 </div>
 
@@ -194,7 +212,7 @@
                     Олег Торбосов
                   </p>
                   <p class="hero__speaker-text">
-                    Продажи и запуски в Instagram
+                    Как личный бренд влияет бизнес
                   </p>
                 </div>
 
@@ -206,17 +224,28 @@
 
           </div>
 
-          <div class="hero__support">
+          <!--  <div class="hero__support">
             <p class="hero__support-text">При поддержке:</p>
             <div class="hero__support-list">
               <img src="./assets/images/hero/alpha.svg" alt="Alpha Bank" class="hero__support-item">
               <img src="./assets/images/hero/touch.png" alt="TouchLife" class="hero__support-item">
               <img src="./assets/images/hero/slivki.png" alt="Slivki.by" class="hero__support-item">
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="hero__speakers desktop">
           <div class="hero__speakers-list">
+            <div class="hero__speaker anatoiliy">
+              <img src="./assets/images/hero/anatoliy.png" alt="Анатолий Недашковский" class="hero__speaker-img ">
+              <div class="hero__speaker-info">
+                <p class="hero__speaker-name">
+                  Анатолий Недашковский
+                </p>
+                <p class="hero__speaker-text">
+                  Сливки как драйвер вашего бренда
+                </p>
+              </div>
+            </div>
             <div class="hero__speaker nina">
               <img src="./assets/images/hero/nina.png" alt="Нина Огиль" class="hero__speaker-img ">
               <div class="hero__speaker-info">
@@ -225,7 +254,7 @@
                 </p>
                 <p class="hero__speaker-text">
 
-                  Продажи и запуски в Instagram
+                  Управление первым впечатлением
                 </p>
               </div>
             </div>
@@ -236,7 +265,7 @@
                   Мария Гурбанова
                 </p>
                 <p class="hero__speaker-text">
-                  Продажи и запуски в Instagram
+                  Как создать сильный личный бренд
                 </p>
               </div>
 
@@ -244,27 +273,15 @@
             </div>
 
             <div class="hero__speaker alena">
-              <img src="./assets/images/hero/alena.png" alt="Алена Дземидович" class="hero__speaker-img ">
+              <img src="./assets/images/hero/two.png" alt="Алена Дземидович и Виталий Захаров"
+                class="hero__speaker-img ">
+
               <div class="hero__speaker-info">
                 <p class="hero__speaker-name">
-                  Алена Дземидович
+                  Алена Дземидович и Виталий Захаров
                 </p>
                 <p class="hero__speaker-text">
-                  Продажи и запуски в Instagram
-                </p>
-              </div>
-
-
-            </div>
-
-            <div class="hero__speaker vitaliy">
-              <img src="./assets/images/hero/vitaliy.png" alt="Виталий Захаров" class="hero__speaker-img ">
-              <div class="hero__speaker-info">
-                <p class="hero__speaker-name">
-                  Виталий Захаров
-                </p>
-                <p class="hero__speaker-text">
-                  Продажи и запуски в Instagram
+                  Creative Head хорошо, а с PR лучше
                 </p>
               </div>
 
@@ -272,13 +289,13 @@
             </div>
 
             <div class="hero__speaker elena">
-              <img src="./assets/images/hero/elena.png" alt="Елена Гвоздь" class="hero__speaker-img ">
+              <img src="./assets/images/hero/elena.png" alt="Наталья Роше" class="hero__speaker-img ">
               <div class="hero__speaker-info">
                 <p class="hero__speaker-name">
-                  Елена Гвоздь
+                  Наталья Роше
                 </p>
                 <p class="hero__speaker-text">
-                  Продажи и запуски в Instagram
+                  Личный бренд как проводник в продажах
                 </p>
               </div>
 
@@ -286,13 +303,13 @@
             </div>
 
             <div class="hero__speaker natalia">
-              <img src="./assets/images/hero/natalia.png" alt="Наталья Роше" class="hero__speaker-img ">
+              <img src="./assets/images/hero/natalia.png" alt="Елена Гвоздь" class="hero__speaker-img ">
               <div class="hero__speaker-info">
                 <p class="hero__speaker-name">
-                  Наталья Роше
+                  Елена Гвоздь
                 </p>
                 <p class="hero__speaker-text">
-                  Продажи и запуски в Instagram
+                  Как вести любой блог в Instagram
                 </p>
               </div>
 
@@ -306,7 +323,7 @@
                   Олег Торбосов
                 </p>
                 <p class="hero__speaker-text">
-                  Продажи и запуски в Instagram
+                  Как личный бренд влияет бизнес
                 </p>
               </div>
 
@@ -322,6 +339,36 @@
     </section>
 
     <div class="wrapper">
+      <section class="partners">
+        <div class="partners__header">
+          <h2 class="partners__title">
+            наши
+            <span>
+              партнёры
+            </span>
+          </h2>
+
+        </div>
+        <div class="partners__list">
+          <img src="./assets/images/partners/1.png" alt="Кофейня Корица" class="partners__item" />
+          <img src="./assets/images/partners/2.png" alt="Подари вино" class="partners__item" />
+          <img src="./assets/images/partners/3.png" alt="Slivki.by" class="partners__item" />
+          <img src="./assets/images/partners/4.png" alt="Дом рекламы" class="partners__item" />
+          <img src="./assets/images/partners/5.png" alt="Aura" class="partners__item" />
+          <img src="./assets/images/partners/6.png" alt="Status" class="partners__item" />
+          <img src="./assets/images/partners/7.png" alt="Перфекционист" class="partners__item" />
+          <img src="./assets/images/partners/8.png" alt="Ok flowers" class="partners__item" />
+          <img src="./assets/images/partners/9.png" alt="Красный пищевик" class="partners__item" />
+          <img src="./assets/images/partners/10.png" alt="Yuridan" class="partners__item" />
+          <img src="./assets/images/partners/11.png" alt="Modum" class="partners__item" />
+          <img src="./assets/images/partners/12.png" alt="Лидское" class="partners__item" />
+          <img src="./assets/images/partners/13.png" alt="Alpha Bank" class="partners__item" />
+          <img src="./assets/images/partners/14.png" alt="Zefir club" class="partners__item" />
+
+
+        </div>
+      </section>
+
       <section class="speakers" id="speakers">
         <div class="speakers__header">
           <h2 class="speakers__title">
@@ -429,8 +476,8 @@
                 </p>
                 <p class="speakers__item-name">Нина Огиль</p>
                 <p class="speakers__item-text">
-                  Маркетолог, эксперт по продажам, действующий продюсер инфопродуктов,
-                  партнер Международной Академии Маркетингового
+                  Маркетолог, эксперт по продажам, действующий продюсер инфопродуктов, партнер Международной Академии
+                  Маркетингового
                   Образования, автор курсов про продажам и продюсированию на 500+ выпускников, наставник ТОП блогеров
                   Беларуси (Алена
                   Меловацкая, Света Малинина, Налоги хелп, Алина Балаш, Ирина Скибенко, Татьяна Шумская)
@@ -661,8 +708,12 @@
                 </p>
                 <p class="speakers__item-name">Алена Дземидович</p>
                 <p class="speakers__item-text">
-                  Руководитель Центра коммуникаций и связей с общественностью
-                  Альфа Банк Беларусь </p>
+                  Руководитель Центра коммуникаций и связей с общественностью
+                  — Входит в топ-10 маркетологов Беларуси 2024
+                  — 100+ реализованных PR-кампаний (Borjomi, Яндекс.Плюс, МТС, A1, Mark Formelle и др.)
+                  — Автор курса по influence marketing
+                  — 9 лет в коммуникациях
+                </p>
               </div>
               <div class="speakers__item-social">
                 <a href="instagram" class="speakers__item-social-link">
@@ -736,7 +787,12 @@
                 </p>
                 <p class="speakers__item-name">Виталий Захаров</p>
                 <p class="speakers__item-text">
-                  Креативный директор Альфа Банк Беларусь </p>
+                  Креативный директор Альфа-Банка
+                  — 16 лет в рекламе: BBDO, TBWA, Brama, Loga Biga
+                  — Победитель и член жюри международных фестивалей
+                  — Автор курса «Креативная коммуникация» БГУ
+                  — Один из создателей айдентики ЧМ по хоккею 2014 и Европейских Игр 2019
+                </p>
               </div>
               <div class="speakers__item-social">
                 <a href="instagram" class="speakers__item-social-link">
@@ -810,7 +866,15 @@
                 </p>
                 <p class="speakers__item-name">Анатолий Недашковский</p>
                 <p class="speakers__item-text">
-                  Креативный директор Альфа Банк Беларусь </p>
+                  Управляющий директор Slivki.by
+                  — более 1 млн. посетителей
+                  — 150 000 транзакций в месяц
+                  — Спикер Дни маркетинга и рекламы, Digital Day Belarus, Про бизнес, Beautycon 2025, Бьюти-бизнес
+                  конференция 2025, студ.
+                  форума "Маркетинг 6.0"
+                  — Ментор проекта Хакатон» от Альфа банка
+                  — Лектор программ в БГУ, БНТУ.
+                </p>
               </div>
               <div class="speakers__item-social">
                 <a href="instagram" class="speakers__item-social-link">
@@ -885,7 +949,8 @@
                 <p class="speakers__item-name">Наталья Роше</p>
                 <p class="speakers__item-text">
                   Телеведущая, стилист, бизнес вумен, признанный лидер селебрити сообщества в Беларуси. Основатель
-                  бренда одежды Sali&Ro </p>
+                  бренда одежды Sali&Ro
+                </p>
               </div>
               <div class="speakers__item-social">
                 <a href="instagram" class="speakers__item-social-link">
@@ -969,48 +1034,41 @@
               </p>
             </div>
             <p class="expectations__item-text">
-              Экспертный нетворкинг: делитесь опытом с профи из сферы маркетинга,
-              решайте задачи в брейнстормах и находите партнёров
-              через неформальные диалоги.
+              500 потенциальных партнёров, клиентов.
+              500 точек масштабирования вашего бизнеса.
+              В одном зале — предприниматели, руководители бизнеса маркетологи и эксперты с реальным опытом.
+              Это не просто обмен идеями, а среда, где быстро возникают сотрудничество и новые проекты.
+              Станьте частью комьюнити, которое формирует тренды и двигает рынок вперёд.
             </p>
           </div>
           <div class="expectations__item">
             <div class="expectations__item-caption">
-              <img src="./assets/images/calendar.svg" alt="" class="expectations__item-img">
+              <img src="./assets/images/mic.svg" alt="" class="expectations__item-img">
+              <p class="expectations__item-title">
+                8 спикеров
+              </p>
+            </div>
+            <p class="expectations__item-text">
+              Сильный спикерский состав: управленцы с операционным опытом и эксперты, усиливающие бизнес через личный
+              бренд.
+              Узнаете как совмещать системность управления и силу личности как инструмента роста.
+            </p>
+          </div>
+          <div class="expectations__item">
+            <div class="expectations__item-caption">
+              <img src="./assets/images/time.svg" alt="" class="expectations__item-img">
               <p class="expectations__item-title">
                 8 часов
               </p>
             </div>
             <p class="expectations__item-text">
-              Целый день с экспертами по продвижению личного бренда: учитесь, внедряйте, тестируйте — без перерывов на
-              кофе-брейки.
+              Э8 часов концентрированной практики от тех, кто ежедневно управляет ростом бизнеса.
+              Только рабочие стратегии, проверенные инструменты и живой опыт.
+              Один день, чтобы получить свежие решения, переосмыслить подходы и увидеть новые точки роста вашего
+              бизнеса.
             </p>
           </div>
-          <div class="expectations__item">
-            <div class="expectations__item-caption">
-              <img src="./assets/images/people.svg" alt="" class="expectations__item-img">
-              <p class="expectations__item-title">
-                500+ человек
-              </p>
-            </div>
-            <p class="expectations__item-text">
-              Экспертный нетворкинг: делитесь опытом с профи из сферы маркетинга,
-              решайте задачи в брейнстормах и находите партнёров
-              через неформальные диалоги.
-            </p>
-          </div>
-          <div class="expectations__item">
-            <div class="expectations__item-caption">
-              <img src="./assets/images/calendar.svg" alt="" class="expectations__item-img">
-              <p class="expectations__item-title">
-                8 часов
-              </p>
-            </div>
-            <p class="expectations__item-text">
-              Целый день с экспертами по продвижению личного бренда: учитесь, внедряйте, тестируйте — без перерывов на
-              кофе-брейки.
-            </p>
-          </div>
+
         </div>
       </section>
 
@@ -1746,7 +1804,7 @@
             </div>
             <img src="./assets/images/program/5.png" alt="" class="program__item-picture">
           </div>
-          <div class="program__item">
+          <div class="program__item headliner">
             <div class="program__item-time">
               16:00-17:00
             </div>
@@ -1754,6 +1812,9 @@
               <span>Тема:</span> Как личный бренд влияет на ведение и развитие бизнеса
               <div class="program__item-speakers">
                 Спикер: Олег Торбосов
+              </div>
+              <div class="program__item-headline">
+                Хедлайнер конференции
               </div>
             </div>
             <img src="./assets/images/program/6.png" alt="" class="program__item-picture">
@@ -1983,7 +2044,7 @@
         </p>
         <div class="footer__caption-partners">
           <img src="./assets/images/partners/mastercard.png" alt="Mastercard">
-          <img src="./assets/images/partners/alfa.png" alt="Альфа-Банк">
+          <img src="./assets/images/partners/13.png" alt="Альфа-Банк">
           <img src="./assets/images/partners/apple.png" alt="Apple Pay">
           <img src="./assets/images/partners/belcard-pass.png" alt="Белкард Интернет пароль">
           <img src="./assets/images/partners/belcard.png" alt="Белкард">
@@ -2068,7 +2129,7 @@
 
         </div>
 
-        <a href="#" class="button">
+        <a href="#tariffs" class="button mobile-menu__info-button">
           Купить билет
         </a>
       </div>

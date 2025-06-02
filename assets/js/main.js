@@ -64,6 +64,10 @@ document.addEventListener("click", (e) => {
     mobileMenu.classList.remove("active");
   }
 
+  if (e.target.classList.contains("mobile-menu__info-button")) {
+    mobileMenu.classList.remove("active");
+  }
+
   if (e.target.classList.contains("mobile-menu")) {
     mobileMenu.classList.remove("active");
   }

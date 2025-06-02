@@ -1,0 +1,180 @@
+@use "../fonts" as *;
+@use "../functions" as *;
+
+.partners {
+  margin-top: vw-1600(140);
+
+  @media (max-width: 768px) {
+    margin-top: 72px;
+  }
+
+  &__title {
+    color: var(--txt);
+    margin-bottom: vw-1600(42);
+    @include h2-semi;
+
+    span {
+      @include h2-black;
+      color: var(--yellow);
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: vw-1600(20);
+    align-items: center;
+    gap: vw-1600(30);
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      gap: 28px 16px;
+    }
+
+    img {
+      &:nth-child(1) {
+        width: vw-1600(121);
+        height: vw-1600(121);
+
+        @media (max-width: 768px) {
+          width: 75px;
+          height: 75px;
+        }
+      }
+
+      &:nth-child(2) {
+        width: vw-1600(105);
+        height: vw-1600(132);
+
+        @media (max-width: 768px) {
+          width: 65px;
+          height: 82.5px;
+        }
+      }
+
+      &:nth-child(3) {
+        width: vw-1600(241);
+        height: vw-1600(60);
+
+        @media (max-width: 768px) {
+          width: 149px;
+          height: 37px;
+        }
+      }
+
+      &:nth-child(4) {
+        width: vw-1600(214);
+        height: vw-1600(72);
+
+        @media (max-width: 768px) {
+          width: 133px;
+          height: 45px;
+        }
+      }
+
+      &:nth-child(5) {
+        width: vw-1600(143);
+        height: vw-1600(88);
+
+        @media (max-width: 768px) {
+          width: 89px;
+          height: 55px;
+        }
+      }
+
+      &:nth-child(6) {
+        width: vw-1600(134);
+        height: vw-1600(114);
+
+        @media (max-width: 768px) {
+          width: 82px;
+          height: 70px;
+        }
+      }
+
+      &:nth-child(7) {
+        width: vw-1600(103);
+        height: vw-1600(99);
+
+        @media (max-width: 768px) {
+          width: 64px;
+          height: 61px;
+        }
+      }
+
+      &:nth-child(8) {
+        width: vw-1600(160);
+        height: vw-1600(70);
+
+        @media (max-width: 768px) {
+          width: 116px;
+          height: 51px;
+        }
+      }
+
+      &:nth-child(9) {
+        width: vw-1600(140);
+        height: vw-1600(95);
+
+        @media (max-width: 768px) {
+          width: 87px;
+          height: 59px;
+        }
+      }
+
+      &:nth-child(10) {
+        width: vw-1600(120);
+        height: vw-1600(100);
+
+        @media (max-width: 768px) {
+          width: 123px;
+          height: 28px;
+        }
+      }
+
+      &:nth-child(11) {
+        width: vw-1600(176);
+        height: vw-1600(40);
+
+        @media (max-width: 768px) {
+          width: 80px;
+          height: 64px;
+        }
+      }
+
+      &:nth-child(12) {
+        width: vw-1600(142);
+        height: vw-1600(113);
+
+        @media (max-width: 768px) {
+          width: 94px;
+          height: 37px;
+        }
+      }
+
+      &:nth-child(13) {
+        width: vw-1600(174);
+        height: vw-1600(39);
+
+        @media (max-width: 768px) {
+          width: 123px;
+          height: 25px;
+        }
+      }
+
+      &:nth-child(14) {
+        width: vw-1600(184);
+        height: vw-1600(72);
+
+        @media (max-width: 768px) {
+          width: 60px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}
