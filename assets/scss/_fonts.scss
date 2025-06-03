@@ -284,7 +284,7 @@
   font-family: var(--second-family);
   font-weight: 500;
   font-size: vw-1600(16);
-  line-height: 140%;
+  line-height: 100%;
 
   @media (max-width: 768px) {
     font-size: 13px;
@@ -308,6 +308,7 @@
   font-family: var(--third-family);
   font-weight: 800;
   font-size: vw-1600(26);
+  line-height: 1;
 
   @media (max-width: 768px) {
     font-size: 20px;
@@ -318,6 +319,7 @@
   font-family: var(--third-family);
   font-weight: 800;
   font-size: vw-1600(20);
+  line-height: 1;
 
   @media (max-width: 768px) {
     font-size: 18px;

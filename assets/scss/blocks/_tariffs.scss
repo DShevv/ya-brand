@@ -95,6 +95,7 @@
       @include h5;
       text-align: center;
       margin-bottom: vw-1600(70);
+      line-height: 1;
 
       @media (max-width: 768px) {
         margin-bottom: 60px;
@@ -112,6 +113,7 @@
         gap: vw-1600(8);
         filter: grayscale(100%);
         opacity: 0.4;
+        line-height: 1;
 
         @media (max-width: 768px) {
           margin-bottom: 6px;
@@ -169,6 +171,7 @@
 
       span {
         @include body-7;
+        line-height: 1;
         color: var(--bg);
         opacity: 0.5;
         text-decoration: line-through;
@@ -180,6 +183,7 @@
       color: var(--txt);
       border-radius: vw-1600(32);
       padding: vw-1600(7) vw-1600(16) vw-1600(7) vw-1600(16);
+      line-height: 1;
       background: var(--bg);
 
       @media (max-width: 768px) {

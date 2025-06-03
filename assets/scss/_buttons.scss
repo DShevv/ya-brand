@@ -22,6 +22,7 @@
     min-width: 200px;
     border-radius: 48px;
     padding: 12px 24px;
+    max-height: 44px;
   }
 
   &:hover {
@@ -77,6 +78,7 @@
   svg {
     width: vw-1600(30);
     height: vw-1600(24);
+    pointer-events: none;
   }
 
   &:hover {

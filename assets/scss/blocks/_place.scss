@@ -84,8 +84,9 @@
     border-radius: vw-1600(12);
 
     @media (max-width: 768px) {
-      height: 300px;
       border-radius: 12px;
+      width: 100%;
+      height: auto;
     }
   }
 }

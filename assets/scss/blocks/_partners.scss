@@ -32,7 +32,7 @@
     justify-content: space-between;
 
     @media (max-width: 768px) {
-      gap: 28px 16px;
+      gap: 28px 13px;
     }
 
     img {
@@ -107,8 +107,8 @@
       }
 
       &:nth-child(8) {
-        width: vw-1600(160);
-        height: vw-1600(70);
+        width: vw-1600(102);
+        height: vw-1600(43);
 
         @media (max-width: 768px) {
           width: 116px;
@@ -131,8 +131,8 @@
         height: vw-1600(100);
 
         @media (max-width: 768px) {
-          width: 123px;
-          height: 28px;
+          width: 60px;
+          height: 50px;
         }
       }
 
@@ -141,24 +141,34 @@
         height: vw-1600(40);
 
         @media (max-width: 768px) {
+          width: 123px;
+          height: 28px;
+        }
+      }
+
+      &:nth-child(12) {
+        width: vw-1600(113);
+        height: vw-1600(113);
+
+        @media (max-width: 768px) {
+          width: 65px;
+          height: 65px;
+        }
+      }
+
+      &:nth-child(13) {
+        width: vw-1600(120);
+        height: vw-1600(95);
+
+        @media (max-width: 768px) {
           width: 80px;
           height: 64px;
         }
       }
 
-      &:nth-child(12) {
-        width: vw-1600(142);
-        height: vw-1600(113);
-
-        @media (max-width: 768px) {
-          width: 94px;
-          height: 37px;
-        }
-      }
-
-      &:nth-child(13) {
+      &:nth-child(14) {
         width: vw-1600(174);
-        height: vw-1600(39);
+        height: vw-1600(36);
 
         @media (max-width: 768px) {
           width: 123px;
@@ -166,13 +176,13 @@
         }
       }
 
-      &:nth-child(14) {
-        width: vw-1600(184);
-        height: vw-1600(72);
+      &:nth-child(15) {
+        width: vw-1600(118);
+        height: vw-1600(47);
 
         @media (max-width: 768px) {
-          width: 60px;
-          height: 50px;
+          width: 94px;
+          height: 37px;
         }
       }
     }
