@@ -77,10 +77,50 @@
       &.active {
         box-shadow: 6px 8px 0 0 var(--yellow);
       }
+
+      &:nth-child(7) {
+        height: 748px !important;
+
+        .speakers__item-info {
+          height: 524px !important;
+        }
+      }
     }
 
     &:hover {
       box-shadow: 10px 12px 0 0 var(--yellow);
+    }
+
+    &:nth-child(n + 5) {
+      height: vw-1600(818);
+
+      @media (max-width: 768px) {
+        height: 640px;
+      }
+
+      .speakers__item-info {
+        height: vw-1600(594);
+
+        @media (max-width: 768px) {
+          height: 420px;
+        }
+      }
+    }
+
+    &:nth-last-child(1) {
+      height: vw-1600(700);
+
+      @media (max-width: 768px) {
+        height: 640px;
+      }
+
+      .speakers__item-info {
+        height: vw-1600(475);
+
+        @media (max-width: 768px) {
+          height: 420px;
+        }
+      }
     }
 
     &-img {

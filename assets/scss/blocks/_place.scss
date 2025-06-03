@@ -78,7 +78,7 @@
   }
 
   &__picture {
-    width: 100%;
+    width: vw-1600(768);
     height: 100%;
     object-fit: contain;
     border-radius: vw-1600(12);
