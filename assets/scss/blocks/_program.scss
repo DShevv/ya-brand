@@ -127,10 +127,21 @@
       color: var(--yellow);
       transition: color 0.3s ease;
 
+      .online {
+        width: vw-1600(118);
+        height: vw-1600(35);
+      }
+
       @media (max-width: 768px) {
         flex: initial;
         width: 100%;
         text-align: left;
+
+        .online {
+          display: none;
+          width: 99px;
+          height: 29px;
+        }
       }
     }
 
@@ -171,9 +182,20 @@
       left: 0;
       transition: color 0.3s ease;
 
+      .online {
+        display: none;
+      }
+
       @media (max-width: 768px) {
         position: relative;
         margin-top: 24px;
+
+        .online {
+          display: block;
+          margin-top: 12px;
+          width: 99px;
+          height: 29px;
+        }
       }
     }
 

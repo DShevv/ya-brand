@@ -68,6 +68,22 @@
     box-shadow: 0 0 0 0 var(--yellow);
     transition: all 0.3s ease-in-out;
 
+    .online {
+      position: absolute;
+      width: vw-1600(118);
+      height: vw-1600(35);
+      z-index: 1;
+      top: vw-1600(24);
+      left: vw-1600(24);
+
+      @media (max-width: 768px) {
+        width: 117px;
+        height: 34px;
+        top: 18px;
+        left: 18px;
+      }
+    }
+
     @media (max-width: 768px) {
       flex: initial;
       height: 640px;
@@ -130,6 +146,7 @@
       width: 100%;
       height: vw-1600(260);
       object-fit: cover;
+      object-position: top;
 
       @media (max-width: 768px) {
         height: 260px;

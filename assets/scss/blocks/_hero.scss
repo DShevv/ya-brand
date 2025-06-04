@@ -507,6 +507,32 @@
       width: vw-1600(349);
       height: vw-1600(525);
       z-index: 3;
+      filter: grayscale(0);
+
+      &:hover {
+        .hero__speaker-img {
+          filter: grayscale(0);
+        }
+
+        .online {
+          opacity: 1;
+        }
+      }
+
+      .hero__speaker-img {
+        filter: grayscale(1);
+      }
+
+      .online {
+        opacity: 0;
+        position: absolute;
+        left: vw-1600(170);
+        bottom: vw-1600(495);
+        width: vw-1600(118);
+        height: vw-1600(35);
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+      }
 
       .hero__speaker-info {
         left: vw-1600(210);
@@ -518,6 +544,13 @@
         bottom: 33.63%;
         width: 42.04%;
         height: 63.66%;
+
+        .online {
+          left: 60.2%;
+          bottom: 83.86%;
+          width: 58px;
+          height: 17px;
+        }
 
         .hero__speaker-info {
           left: 29.2%;

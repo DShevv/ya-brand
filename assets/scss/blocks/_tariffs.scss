@@ -105,6 +105,39 @@
     &-list {
       @include body-7;
       list-style: none;
+      max-height: vw-1600(438);
+      overflow-y: auto;
+      width: calc(100% + vw-1600(12));
+      position: relative;
+      left: vw-1600(12);
+      padding-right: vw-1600(12);
+
+      @media (max-width: 768px) {
+        max-height: 315px;
+        padding-right: 12px;
+        left: 12px;
+        width: calc(100% + 12px);
+      }
+
+      &::-webkit-scrollbar {
+        width: vw-1600(6);
+        border-radius: vw-1600(10);
+        background-color: #10101027;
+
+        @media (max-width: 768px) {
+          border-radius: 10px;
+          width: 6px;
+        }
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: var(--violet);
+        border-radius: vw-1600(10);
+
+        @media (max-width: 768px) {
+          border-radius: 10px;
+        }
+      }
 
       li {
         margin-bottom: vw-1600(12);
