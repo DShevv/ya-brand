@@ -161,7 +161,7 @@ async function initMap() {
         .split(" ")
         .map(Number); // Теперь получаем [долгота, широта]
 
-    fetch("/assets/maps.json")
+    fetch("./assets/maps.json")
       .then((response) => response.json())
       .then((data) => {
         console.log(coordinates, address);
